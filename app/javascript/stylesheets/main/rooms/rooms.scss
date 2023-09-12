@@ -1,0 +1,121 @@
+.RoomsContainer {
+  margin-bottom: 260px;
+  padding-top: 40px;
+
+  @include sm-device-or-less {
+    margin-bottom: 200px;
+  }
+
+  @include xs-device-or-less {
+    margin-bottom: 100px;
+    padding-top: 24px;
+  }
+
+  &__result {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 24px;
+  }
+}
+
+.RoomList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+
+  @include sm-device-or-less {
+    gap: 20px;
+  }
+
+  @include xs-device-or-less {
+    gap: 16px;
+  }
+}
+
+.Room {
+  background: $background-beige;
+  border-radius: 26px;
+  width: calc((100% - 64px) / 3);
+
+  @include sm-device-or-less {
+    width: calc((100% - 20px) / 2);
+  }
+
+  @include xs-device-or-less {
+    width: 100%;
+  }
+
+  &__image {
+    aspect-ratio: 16 / 9;
+    border-radius: 26px 26px 0px 0px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  &__name {
+    @include room-name;
+  }
+
+  &__address {
+    @include room-address;
+  }
+
+  &__stars {
+    display: block;
+    margin-bottom: 20px;
+
+    @include xs-device-or-less {
+      margin-bottom: 18px;
+    }
+
+    > img {
+      margin-right: 2px;
+      width: 16px;
+    }
+  }
+
+  &__content {
+    @include room-content;
+  }
+
+  &__price {
+    @include room-price;
+  }
+
+  &__link {
+    @include basic-button;
+    @include primary-button;
+
+    font-size: 16px;
+    line-height: 58px;
+    padding: 0 20px;
+    text-align: center;
+
+    @include md-device-or-less {
+      width: 100%;
+    }
+  }
+}
+
+.RoomBodyWrapper {
+  padding: 40px 24px;
+
+  @include sm-device-or-less {
+    padding: 20px;
+  }
+
+  @include sm-device-or-less {
+    padding: 16px;
+  }
+}
+
+.RoomFooter {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  @include md-device-or-less {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

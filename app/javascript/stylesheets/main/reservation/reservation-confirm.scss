@@ -1,0 +1,57 @@
+.ReservationConfirm {
+  &__value-group {
+    align-items: baseline;
+    display: flex;
+    font-size: 16px;
+    justify-content: space-between;
+    line-height: 26px;
+    margin-bottom: 24px;
+
+    @include sm-device-or-less {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__label,
+  &__value {
+    margin-bottom: 0;
+  }
+
+  &__label {
+    font-weight: 700;
+  }
+
+  &__value {
+    &--price {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 26px;
+    }
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  &__button {
+    @include basic-button;
+
+    width: 100%;
+
+    &--submit {
+      @include primary-button;
+
+      margin-top: 24px;
+      margin-bottom: 16px;
+
+      @include sm-device-or-less {
+        margin-top: 16px;
+      }
+    }
+
+    &--cancel {
+      @include secondary-button;
+    }
+  }
+}

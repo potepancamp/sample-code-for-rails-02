@@ -1,0 +1,82 @@
+<%= render "shared/search_room_form" %>
+
+<div class="container RoomDetailsContainer">
+  <div class="RoomDetailsHeader">
+    <%= link_to :back, class: "RoomDetailsHeader__link" do %>
+      <%= image_tag "icons/arrow-back-blue.svg", alt: "戻るアイコン" %>
+      戻る
+    <% end %>
+
+    <% if is_own_room?(@room) %>
+      <%= link_to edit_room_path(@room), class: "RoomDetailsHeader__link" do %>
+        <%= image_tag "icons/edit-blue.svg", alt: "編集アイコン" %>
+        編集
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="RoomDetails">
+    <%= image_tag room_image(@room), alt: "部屋画像", class: "RoomDetails__image" %>
+
+    <div class="RoomDetailsBody">
+      <div class="RoomDetailsBody__name-and-price">
+        <p class="RoomDetails__name">
+          <%= @room.name %>
+        </p>
+
+        <p class="RoomDetails__price">
+          ¥<%= @room.price.to_s(:delimited) %>~
+        </p>
+      </div>
+
+      <p class="RoomDetails__address">
+        <%= @room.address %>
+      </p>
+
+      <%= render "shared/rooms/stars" %>
+
+      <p class="RoomDetails__content">
+        <%= @room.content %>
+      </p>
+
+      <div class="ReservationForm">
+        <%= form_with model: @reservation, url: confirm_reservations_path do |f| %>
+          <%= hidden_field_tag "reservation[room_id]", @room.id %>
+
+          <div class="ReservationForm__input-container">
+            <div class="ReservationForm__input-group">
+              <%= f.label :start_date, "チェックイン" %>
+
+              <div class="ReservationForm__input ReservationForm__input--date">
+                <%= f.text_field :start_date, class: "form-control js-picker", placeholder: "---- / -- / --" %>
+                <%= render "shared/error_message", object: @reservation, key: "start_date" %>
+              </div>
+            </div>
+
+            <div class="ReservationForm__input-group">
+              <%= f.label :end_date, "チェックアウト" %>
+
+              <div class="ReservationForm__input ReservationForm__input--date">
+                <%= f.text_field :end_date, class: "form-control js-picker", placeholder: "---- / -- / --" %>
+                <%= render "shared/error_message", object: @reservation, key: "end_date" %>
+              </div>
+            </div>
+
+            <div class="ReservationForm__input-group ReservationForm__input-group--person-count">
+              <%= f.label :person_num, "人数" %>
+              <%= f.number_field "person_num", class: "form-control ReservationForm__input ReservationForm__input--person-count", placeholder: "0" %>
+              <%= render "shared/error_message", object: @reservation, key: "person_num" %>
+              <span>人</span>
+            </div>
+          </div>
+
+          <% if user_signed_in? %>
+            <%= submit_tag "予約する", class: 'btn ReservationForm__button' %>
+          <% else %>
+            <%= link_to "ログイン", new_user_session_path, class: 'btn ReservationForm__button' %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,108 @@
+.RecommendAreaSection {
+  margin-bottom: 260px;
+
+  @include sm-device {
+    margin-bottom: 180px;
+  }
+
+  @include xs-device-or-less {
+    margin-bottom: 100px;
+  }
+
+  &__title {
+    border-bottom: 3px solid $primary-orange;
+    font-size: 44px;
+    line-height: 66px;
+    margin-bottom: 140px;
+    padding-bottom: 15px;
+    width: fit-content;
+
+    @include sm-device {
+      font-size: 34px;
+      line-height: 50px;
+      margin-bottom: 80px;
+    }
+
+    @include xs-device-or-less {
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 60px;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.RecommendAreas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 32px;
+
+  @include xs-device-or-less {
+    gap: 16px;
+  }
+}
+
+.RecommendArea {
+  background-size: cover;
+  background-position: center;
+  border-radius: 26px;
+  display: flex;
+  flex-direction: column;
+  height: 455px;
+  justify-content: flex-end;
+  padding: 40px 24px;
+  width: calc((100% - 96px) / 4);
+
+  @include md-device {
+    width: calc((100% - 64px) / 3);
+  }
+
+  @include sm-device {
+    width: calc((100% - 32px) / 2);
+  }
+
+  @include xs-device-or-less {
+    margin: auto;
+    width: 100%;
+  }
+
+  &--tokyo {
+    background-image: url("/assets/home/recommend-area/tokyo.jpg");
+  }
+
+  &--osaka {
+    background-image: url("/assets/home/recommend-area/osaka.jpg");
+  }
+
+  &--kyoto {
+    background-image: url("/assets/home/recommend-area/kyoto.jpg");
+  }
+
+  &--sapporo {
+    background-image: url("/assets/home/recommend-area/sapporo.jpg");
+  }
+
+  &__name {
+    color: $white;
+
+    &--ja {
+      font-size: 28px;
+      line-height: 42px;
+    }
+
+    &--en {
+      font-family: $font-Lato;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 29px;
+
+      > svg {
+        height: 20px;
+        margin-top: -4px;
+        margin-right: 5px;
+        width: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+<section class="container UserSection">
+  <h2>設定</h2>
+
+  <div class="UserContainer">
+    <%= render "/shared/users/side_navigation" %>
+
+    <section class="AccountInformation">
+      <%= render "/shared/users/tab_navigation" %>
+
+      <div class="AccountInformation__header">
+        <h3>アカウント</h3>
+      </div>
+
+      <%= form_with model: @user, url: user_registration_path do |f| %>
+        <div class="mb-4 AccountInformation__input-group">
+          <%= f.label :email, "メールアドレス", class: "AccountInformation__label" %>
+
+          <div class="AccountInformation__input-wrapper">
+            <%= f.email_field :email, autocomplete: "email", class: "AccountInformation__input", placeholder: "メールアドレスを入力してください" %>
+            <%= render "shared/error_message", object: @user, key: "email" %>
+          </div>
+        </div>
+
+        <div class="mb-4 AccountInformation__input-group">
+          <%= f.label :password, class: "AccountInformation__label" do %>
+            <span>変更後パスワード</span><br>
+            <span class="AccountInformation__label--caption">※変更する場合のみ</span>
+          <% end %>
+
+          <div class="AccountInformation__input-wrapper">
+            <%= f.password_field :password, class: "AccountInformation__input", placeholder: "変更後パスワードを入力" %>
+            <%= render "shared/error_message", object: @user, key: "password" %>
+          </div>
+        </div>
+
+        <div class="mb-4 AccountInformation__input-group">
+          <%= f.label :password_confirmation, class: "AccountInformation__label" do %>
+            <span>確認用パスワード</span><br>
+            <span class="AccountInformation__label--caption">※変更する場合のみ</span>
+          <% end %>
+
+          <div class="AccountInformation__input-wrapper">
+            <%= f.password_field :password_confirmation, class: "AccountInformation__input", placeholder: "変更後パスワードを入力" %>
+            <%= render "shared/error_message", object: @user, key: "password_confirmation" %>
+          </div>
+        </div>
+
+        <div class="mb-4 AccountInformation__input-group">
+          <%= f.label :current_password, "現在のパスワード", class: "AccountInformation__label" %>
+
+          <div class="AccountInformation__input-wrapper">
+            <%= f.password_field :current_password, class: "AccountInformation__input", placeholder: "現在のパスワードを入力" %>
+            <%= render "shared/error_message", object: @user, key: "current_password" %>
+          </div>
+        </div>
+
+        <div class="AccountInformation__buttons">
+          <%= link_to "キャンセル", users_account_path , class: 'btn AccountInformation__button AccountInformation__button--secondary' %>
+          <%= f.submit "保存", class: "btn AccountInformation__button AccountInformation__button--primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>

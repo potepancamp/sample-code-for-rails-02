@@ -1,0 +1,44 @@
+.ReservationsForm {
+  &__input-group {
+    margin-bottom: 24px;
+
+    &--person-count {
+      position: relative;
+
+      > span {
+        color: #a2a2a4;
+        position: absolute;
+        top: 42px;
+        right: 13.5px;
+      }
+    }
+  }
+
+  &__label {
+    color: $text-gray;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__button {
+    @include basic-button;
+
+    font-size: 14px;
+    font-weight: 700;
+    height: 45px;
+    line-height: 21px;
+    width: 100%;
+
+    &--submit {
+      @include primary-button;
+
+      margin-bottom: 16px
+    }
+
+    &--cancel {
+      @include secondary-button;
+
+      color: $text-black;
+    }
+  }
+}

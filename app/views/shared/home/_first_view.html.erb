@@ -1,0 +1,16 @@
+<div class="FirstView">
+  <section class="container">
+    <h2 class="FirstView__title">
+      Potepan Shareで<br>
+      まだ体験したことのない<br>
+      旅をしよう
+    </h2>
+
+    <div class="FirstViewSearch">
+      <%= form_with url: rooms_url, method: :get do |f| %>
+        <%= f.text_field "area", class: "form-control FirstViewSearch__input", placeholder: "エリア名を入力" %>
+        <%= f.submit "検索", class: "btn FirstViewSearch__button" %>
+      <% end %>
+    </div>
+  </section>
+</div>

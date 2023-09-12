@@ -1,0 +1,78 @@
+.ReservationsContainer {
+  margin-top: 40px;
+  margin-bottom: 260px;
+}
+
+.ReservationsTable {
+  @include index-table;
+}
+
+.ReservationForm {
+  &__input-container {
+    background-color: $white;
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+    padding: 24px;
+
+    @include xs-device-or-less {
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 16px;
+      padding: 16px;
+    }
+  }
+
+  &__input-group {
+    width: calc((100% - 48px) / 3);
+
+    @include xs-device-or-less {
+      width: 100%;
+    }
+
+    > label {
+      margin-bottom: 8px
+    }
+
+    &--person-count {
+      position: relative;
+
+      > span {
+        color: #a2a2a4;
+        position: absolute;
+        top: 42px;
+        right: 13.5px;
+      }
+    }
+  }
+
+  &__input {
+    &--date {
+      position: relative;
+
+      &::after {
+        background-image: url(/images/icons/calendar.svg);
+        background-repeat: round;
+        content: "";
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    &--person-count {
+      padding-right: 40px;
+    }
+  }
+
+  &__button {
+    @include basic-button;
+    @include primary-button;
+
+    height: 71px;
+    line-height: 58px;
+    width: 100%;
+  }
+}

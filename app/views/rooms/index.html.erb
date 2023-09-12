@@ -1,0 +1,39 @@
+<%= render "shared/search_room_form" %>
+
+<div class="container RoomsContainer">
+  <p class="RoomsContainer__result">
+    <b><%= @rooms.count %></b>&nbsp;件が見つかりました。
+  </p>
+
+  <ul class="RoomList">
+    <% @rooms.each do |room| %>
+      <li class="Room">
+        <%= image_tag room_image(room), alt: "部屋画像", class: "Room__image" %>
+
+        <div class="RoomBodyWrapper">
+          <p class="Room__name">
+            <%= room.name %>
+          </p>
+
+          <p class="Room__address">
+            <%= room.address %>
+          </p>
+
+          <%= render "shared/rooms/stars" %>
+
+          <p class="Room__content">
+            <%= room.content %>
+          </p>
+
+          <div class="RoomFooter">
+            <p class="Room__price">
+              ¥<%= room.price.to_s(:delimited) %>~
+            </p>
+
+            <%= link_to "詳細はこちら", room_url(room), class: "Room__link" %>
+          </div>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>

@@ -1,0 +1,66 @@
+// ブレイクポイント
+$xl-min: 1920px;
+$lg-min: 1280px;
+$md-min: 960px;
+$sm-min: 600px;
+$xs-min: 400px;
+
+@mixin xl-device {
+  @media screen and (min-width: $xl-min) {
+    @content;
+  }
+}
+
+@mixin lg-device {
+  @media screen and (min-width: $lg-min) and (max-width: $xl-min) {
+    @content;
+  }
+}
+
+@mixin md-device {
+  @media screen and (min-width: $md-min) and (max-width: $lg-min) {
+    @content;
+  }
+}
+
+@mixin sm-device {
+  @media screen and (min-width: $sm-min) and (max-width: $md-min) {
+    @content;
+  }
+}
+
+@mixin xs-device {
+  @media screen and (min-width: $xs-min) and (max-width: $sm-min) {
+    @content;
+  }
+}
+
+@mixin xxs-device {
+  @media screen and (max-width: $xs-min) {
+    @content;
+  }
+}
+
+@mixin lg-device-or-less {
+  @media screen and (max-width: ($xl-min)) {
+    @content;
+  }
+}
+
+@mixin md-device-or-less {
+  @media screen and (max-width: ($lg-min)) {
+    @content;
+  }
+}
+
+@mixin sm-device-or-less {
+  @media screen and (max-width: ($md-min)) {
+    @content;
+  }
+}
+
+@mixin xs-device-or-less {
+  @media screen and (max-width: ($sm-min)) {
+    @content;
+  }
+}

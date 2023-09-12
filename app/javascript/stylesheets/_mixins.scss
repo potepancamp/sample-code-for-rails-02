@@ -1,0 +1,127 @@
+@mixin basic-button {
+  align-items: center;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  height: 58px;
+  font-size: 18px;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+@mixin primary-button {
+  background-color: $primary-orange;
+  color: $white;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+@mixin secondary-button {
+  border: 1px solid $border-light-gray;
+  color: $text-gray;
+  line-height: 44px;
+
+  &:hover {
+    color: $text-gray;
+  }
+}
+
+@mixin index-table {
+  @include sm-device-or-less {
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    font-size: 14px;
+    line-height: 18px;
+
+    &:first-of-type {
+      padding-left: 0 !important;
+    }
+
+    &:last-of-type {
+      width: 59px;
+    }
+  }
+
+  td {
+    padding: 16px 0.5rem !important;
+
+    &:first-of-type {
+      img {
+        width: 120px;
+      }
+    }
+
+    .dropdown {
+      cursor: pointer;
+
+      .DropdownMenu {
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0px 4px 4px rgba(136, 152, 170, 0.2), 0px 4px 5px -2px rgba(136, 152, 170, 0.14), 0px 2px 16px 1px rgba(136, 152, 170, 0.12);
+        min-width: 95px;
+        padding: 6px 8px;
+        top: -20px !important;
+
+        &__item {
+          padding: 0;
+
+          &:first-of-type {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin room-name {
+  color: $room-text-gray;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 8px;
+}
+
+@mixin room-address {
+  color: $room-text-gray;
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 3px;
+}
+
+@mixin room-price {
+  color: $primary-orange;
+  font-family: $font-Lato;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 39px;
+  margin-bottom: 0;
+
+  @include md-device-or-less {
+    font-size: 25px;
+    line-height: 32px;
+    margin-bottom: 8px;
+  }
+
+  @include xs-device-or-less {
+    font-size: 21px;
+    line-height: 33px;
+    margin-bottom: 8px;
+  }
+}
+
+@mixin room-content {
+  display: -webkit-box;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 24px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}

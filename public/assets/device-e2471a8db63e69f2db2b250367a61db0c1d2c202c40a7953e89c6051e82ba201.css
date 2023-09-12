@@ -1,0 +1,32 @@
+/* line 1, app/assets/stylesheets/device.scss */
+.device {
+  padding-top: 36px;
+  font-size: 16px;
+}
+
+/* line 4, app/assets/stylesheets/device.scss */
+.device p {
+  font-size: 16px;
+}
+
+/* line 7, app/assets/stylesheets/device.scss */
+.device a {
+  color: #007bff !important;
+}
+
+/* line 10, app/assets/stylesheets/device.scss */
+.device_frame {
+  max-width: 600px;
+  text-align: center;
+  padding: 24px;
+  margin: 0px auto;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: rgba(21, 27, 38, 0.15) 0px 1px 3px 0px;
+}
+
+/* line 19, app/assets/stylesheets/device.scss */
+.device_inner {
+  width: 360px;
+  margin: 0px auto;
+}

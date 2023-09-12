@@ -1,0 +1,101 @@
+.FormWrapper {
+  display: flex;
+  height: fit-content;
+  padding: 40px 0 180px;
+
+  @include xs-device-or-less {
+    padding: 24px 0 100px;
+  }
+}
+
+.FormContainer {
+  background-color: $white;
+  border-radius: 12px;
+  margin: auto;
+  width: 702px;
+
+  @include sm-device-or-less {
+    width: 600px;
+  }
+
+  @include xs-device-or-less {
+    width: calc(100% - 32px);
+  }
+}
+
+.Form {
+  &__label {
+    &--required {
+      &::after {
+        content: "*";
+        color: $primary-red;
+        font-size: 14px;
+        margin-left: 4px;
+      }
+    }
+  }
+
+}
+
+.ErrorMessage {
+  color: $primary-red;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.FileUploadArea {
+  align-items: center;
+  display: flex;
+  margin-bottom: 24px;
+
+  @include xs-device-or-less {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  &__image {
+    border-radius: 60px;
+    margin-right: 24px;
+    width: 80px;
+  }
+
+  &__input-group {
+    margin-bottom: 0;
+
+    @include xs-device-or-less {
+      width: 100%;
+    }
+  }
+
+  &__label {
+    background: linear-gradient(180deg, #FFFFFF 0%, #F8F8F8 100%);
+    border: 1px solid #DFE2E6;
+    border-radius: 8px;
+    color: $text-black;
+    font-size: 12px;
+    line-height: 18px;
+    height: 34px;
+    text-align: center;
+    width: 244px;
+
+    @include xs-device-or-less {
+      display: block;
+      margin-top: 8px;
+      margin-left: 0;
+    }
+
+    @include xxs-device {
+      width: 100%;
+    }
+
+    > span {
+      line-height: 34px;
+    }
+
+    > input {
+      display: none;
+    }
+  }
+}

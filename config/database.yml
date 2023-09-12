@@ -1,0 +1,14 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+
+development:
+  <<: *default
+  database: development
+  username: root
+  password:
+
+production:
+  <<: *default
+  url: <%= ENV['JAWSDB_URL']&.sub('mysql://', 'mysql2://') %>

@@ -1,0 +1,81 @@
+.AccountFormWrapper {
+  background-color: $background-gray;
+  display: flex;
+  height: fit-content;
+  min-height: calc(100vh - 80px);
+  padding: 60px 0 120px;
+
+  @include md-device-or-less {
+    min-height: calc(100vh - 66px);
+  }
+
+  @include xs-device-or-less {
+    background-color: $white;
+    padding: 40px 0 80px;
+  }
+}
+
+.AccountFormContainer {
+  background-color: $white;
+  margin: auto;
+  padding: 32px;
+  width: 704px;
+
+  @include md-device-or-less {
+    padding: 40px 16px;
+    width: 478px;
+  }
+
+  @include xs-device-or-less {
+    padding: 0 16px;
+  }
+
+  &__title {
+    font-family: $font-Lato;
+    font-size: 33px;
+    font-weight: 400;
+    line-height: 48px;
+    margin-bottom: 24px;
+    text-align: center;
+
+    @include md-device-or-less {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+}
+
+.AccountForm {
+  &__button {
+    border-radius: 12px;
+    padding: 14px 24px;
+    width: 100%;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &--primary {
+      @include basic-button;
+      @include primary-button;
+
+      @include xs-device-or-less {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    &--secondary {
+      @include secondary-button;
+
+      font-size: 16px;
+      line-height: 24px;
+      height: 52px;
+
+      @include xs-device-or-less {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+}

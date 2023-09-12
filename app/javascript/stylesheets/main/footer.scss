@@ -1,0 +1,36 @@
+.Footer {
+  align-items: center;
+  background-color: $background-navy;
+  display: flex;
+  height: 465px;
+
+  @include xs-device-or-less {
+    height: 385px;
+  }
+
+  > div {
+    margin-top: 100px;
+
+    @include xs-device-or-less {
+      margin-top: 0;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 16px;
+    width: 294px;
+
+    @include xs-device-or-less {
+      width: 199px;
+    }
+  }
+
+  &__copyright {
+    color: $white;
+    font-family: $font-Lato;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    margin-bottom: 0;
+  }
+}

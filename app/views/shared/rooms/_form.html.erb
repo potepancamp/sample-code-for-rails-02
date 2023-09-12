@@ -1,0 +1,52 @@
+<%= form_with model: @room, class: "Form RoomsForm" do |f| %>
+  <div class="RoomsForm__input-group">
+    <%= f.label :name, "施設名", class: "form-label RoomsForm__label Form__label--required" %>
+
+    <div class="RoomsForm__input">
+      <%= f.text_field :name, class: "form-control", placeholder: "ルーム名を入力" %>
+      <%= render "shared/error_message", object: @room, key: "name" %>
+    </div>
+  </div>
+
+  <div class="RoomsForm__input-group">
+    <%= f.label :content, "施設詳細", class: "form-label RoomsForm__label Form__label--required" %>
+
+    <div class="RoomsForm__input">
+      <%= f.text_area :content, rows: 5, class: "form-control", placeholder: "施設詳細を入力" %>
+      <%= render "shared/error_message", object: @room, key: "content" %>
+    </div>
+  </div>
+
+  <div class="RoomsForm__input-group">
+    <%= f.label :price, "料金", class: "form-label RoomsForm__label Form__label--required" %>
+
+    <div class="RoomsForm__input">
+      <%= f.number_field :price, class: "form-control", placeholder: "一日あたりの料金を入力" %>
+      <%= render "shared/error_message", object: @room, key: "price" %>
+    </div>
+  </div>
+
+  <div class="RoomsForm__input-group">
+    <%= f.label :address, "住所", class: "form-label RoomsForm__label Form__label--required" %>
+
+    <div class="RoomsForm__input">
+      <%= f.text_field :address, class: "form-control", placeholder: "住所を入力" %>
+      <%= render "shared/error_message", object: @room, key: "address" %>
+    </div>
+  </div>
+
+  <div class="RoomsForm__input-group FileUploadArea">
+    <%= f.label :image, "施設画像", class: "RoomsForm__label" %>
+
+    <p class=" RoomsForm__input FileUploadArea__input-group">
+      <%= f.label :image, "施設画像", class: "FileUploadArea__label" do %>
+        <span>画像アップロード</span>
+        <%= f.file_field :image %>
+      <% end %>
+    </p>
+  </div>
+
+  <%= f.submit "保存", class: 'btn RoomsForm__button RoomsForm__button--submit' %>
+<% end %>
+
+<%= link_to "キャンセル", :back, class: 'btn RoomsForm__button RoomsForm__button--cancel' %>

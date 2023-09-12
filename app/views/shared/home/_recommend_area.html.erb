@@ -1,0 +1,53 @@
+<div class="container">
+  <section class="RecommendAreaSection">
+    <h2 class="RecommendAreaSection__title">
+      おすすめのエリア
+    </h2>
+
+    <div class="RecommendAreas">
+      <%= link_to rooms_url(params: { area: "東京" }), class: "RecommendArea RecommendArea--tokyo" do %>
+        <span class="RecommendArea__name RecommendArea__name--ja">東京</span>
+
+        <span class="RecommendArea__name RecommendArea__name--en">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+          </svg>
+          Tokyo
+        </span>
+      <% end %>
+
+      <%= link_to rooms_url(params: { area: "大阪" }), class: "RecommendArea RecommendArea--osaka" do %>
+        <span class="RecommendArea__name RecommendArea__name--ja">大阪</span>
+
+        <span class="RecommendArea__name RecommendArea__name--en">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+          </svg>
+          Osaka
+        </span>
+      <% end %>
+
+      <%= link_to rooms_url(params: { area: "京都" }), class: "RecommendArea RecommendArea--kyoto" do %>
+        <span class="RecommendArea__name RecommendArea__name--ja">京都</span>
+
+        <span class="RecommendArea__name RecommendArea__name--en">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+          </svg>
+          Kyoto
+        </span>
+      <% end %>
+
+      <%= link_to rooms_url(params: { area: "札幌" }), class: "RecommendArea RecommendArea--sapporo" do %>
+        <span class="RecommendArea__name RecommendArea__name--ja">札幌</span>
+
+        <span class="RecommendArea__name RecommendArea__name--en">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+          </svg>
+          Sapopro
+        </span>
+      <% end %>
+    </div>
+  </section>
+</div>

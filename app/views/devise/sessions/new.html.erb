@@ -1,0 +1,21 @@
+<div class="AccountFormWrapper">
+  <section class="AccountFormContainer">
+    <h2 class="AccountFormContainer__title">ログイン</h2>
+
+    <%= form_with model: @user, url: user_session_path, class: "Form AccountForm" do |f| %>
+      <div class="mb-3">
+        <%= f.label :email, "メールアドレス", class: "form-label" %>
+        <%= f.text_field :email, class: "form-control", placeholder: "メールアドレスを入力", autocomplete: "email", type: "email" %>
+      </div>
+
+      <div class="mb-3">
+        <%= f.label :password, "パスワード", class: "form-label" %>
+        <%= f.password_field :password, class: "form-control", placeholder: "パスワードを入力" %>
+      </div>
+
+      <%= f.submit "ログイン", class: "btn mb-3 AccountForm__button AccountForm__button--primary" %>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
+  </section>
+</div>

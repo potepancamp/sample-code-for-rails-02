@@ -1,0 +1,5 @@
+<% if object.errors.has_key?(key) %>
+  <p class="ErrorMessage">
+    <%= object.errors.full_messages_for(key).first %>
+  </p>
+<% end %>

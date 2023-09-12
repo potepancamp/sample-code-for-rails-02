@@ -1,0 +1,92 @@
+<div class="container ReservationsContainer">
+  <h2>
+    予約済み一覧
+  </h2>
+
+  <div class="table-responsive">
+    <table class="table align-middle ReservationsTable">
+      <thead>
+        <tr>
+          <th>画像</th>
+          <th>施設名</th>
+          <th>紹介文</th>
+          <th class="text-nowrap">合計料金</th>
+          <th class="text-nowrap">チェックイン</th>
+          <th class="text-nowrap">チェックアウト</th>
+          <th class="text-nowrap">予約確定日時</th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @reservations.each do |reservation| %>
+          <tr>
+            <td>
+              <%= link_to image_tag(room_image(reservation.room)), room_path(reservation.room) %>
+            </td>
+
+            <td>
+              <%= link_to reservation.room.name, room_path(reservation.room) %>
+            </td>
+
+            <td>
+              <%= reservation.room.content %>
+            </td>
+
+            <td class="text-nowrap">
+              ¥<%= reservation.total_amount.to_s(:delimited) %>
+            </td>
+
+            <td class="text-nowrap">
+              <%= reservation.start_date.to_s(:date_jp) %>
+            </td>
+
+            <td class="text-nowrap">
+              <%= reservation.end_date.to_s(:date_jp) %>
+            </td>
+
+            <td class="text-nowrap">
+              <%= reservation.created_at.to_s(:datetime_jp_detail) %>
+            </td>
+
+            <td>
+              <div class="dropdown">
+                <div class="d-flex align-items-center justify-content-center" id="dropdown-button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <%= image_tag "icons/three-dot-menu.svg", alt: "3点メニューアイコン" %>
+                </div>
+
+                <ul class="dropdown-menu DropdownMenu" aria-labelledby="dropdown-button">
+                  <li class="DropdownMenu__item">
+                    <%= link_to "再予約", edit_reservation_path(reservation) %>
+                  </li>
+
+                  <li class="DropdownMenu__item DropdownMenu__item--danger">
+                    <%= link_to "予約を削除",
+                                reservation,
+                                method: :delete,
+                                title: "以下の施設を削除しますか？",
+                                data: {
+                                  confirm: "<div class='ConfirmBody'>
+                                              #{image_tag(room_image(reservation.room), class: 'ConfirmBody__image')}
+                                              <div>
+                                                #{reservation.room.name}<br>
+                                                #{reservation.start_date.to_s(:date_jp)}&nbsp;〜&nbsp;#{reservation.end_date.to_s(:date_jp)}<br>
+                                                #{reservation.person_num}人<br>
+                                                ¥&nbsp;#{reservation.total_amount.to_s(:delimited)}
+                                              </div>
+                                            </div>
+                                            よろしければ「削除」ボタンを押してください。",
+                                  commit: "削除",
+                                  cancel: "キャンセル"
+                                }
+                    %>
+                  </li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="SearchRoomsFormContainer">
+  <%= form_with url: rooms_url, method: :get, class: "SearchRoomsForm" do |f| %>
+    <div class="SearchRoomsForm__input-group SearchRoomsForm__input-group--area">
+      <%= image_tag "icons/location.svg", alt: "ロケーションアイコン" %>
+      <%= f.text_field "area", class: "form-control SearchRoomsForm__input", placeholder: "エリア名を入力" %>
+    </div>
+
+    <div class="SearchRoomsForm__input-group SearchRoomsForm__input-group--keyword">
+      <%= image_tag "icons/search.svg", alt: "サーチアイコン" %>
+      <%= f.text_field "keyword", class: "form-control SearchRoomsForm__input", placeholder: "キーワード名を入力" %>
+    </div>
+
+    <%= f.submit "検索", class: " SearchRoomsForm__button" %>
+  <% end %>
+</div>

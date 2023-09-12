@@ -1,0 +1,79 @@
+.SearchRoomsFormContainer {
+  background-color: $background-gray;
+  display: flex;
+  height: 125px;
+
+  @include xs-device-or-less {
+    height: fit-content;
+    padding: 24px 16px;
+  }
+}
+
+.SearchRoomsForm {
+  display: flex;
+  gap: 16px;
+  margin: auto;
+  width: fit-content;
+
+  @include xs-device-or-less {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  &__input-group {
+    position: relative;
+
+    > img {
+      position: absolute;
+      left: 15px;
+    }
+
+    &--area {
+      > img {
+        top: 10px;
+      }
+    }
+
+    &--keyword {
+      > img {
+        top: 13px;
+      }
+    }
+  }
+
+  &__input {
+    height: 45px;
+    padding-left: 45px;
+    width: 285px;
+
+    @include sm-device-or-less {
+      font-size: 14px;
+      width: 220px;
+    }
+
+    @include xs-device-or-less {
+      width: 100%;
+    }
+
+    &::placeholder {
+      font-size: 16px;
+      line-height: 26px;
+
+      @include sm-device-or-less {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__button {
+    font-size: 16px;
+    line-height: 24px;
+    height: 45px;
+    width: 100px;
+
+    @include xs-device-or-less {
+      width: 100%;
+    }
+  }
+}

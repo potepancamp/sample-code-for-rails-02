@@ -1,0 +1,733 @@
+@charset "UTF-8";
+/* line 1, app/assets/stylesheets/common.scss */
+body {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 180px;
+  box-sizing: border-box;
+  color: #333333;
+}
+
+/* line 8, app/assets/stylesheets/common.scss */
+ul {
+  list-style: none;
+}
+
+/* line 12, app/assets/stylesheets/common.scss */
+a:hover {
+  text-decoration: none;
+  color: #333333;
+}
+
+/* line 18, app/assets/stylesheets/common.scss */
+.btn-primary {
+  background-color: #4a90e2 !important;
+}
+
+/* line 22, app/assets/stylesheets/common.scss */
+.header {
+  width: 100%;
+  height: 70px;
+  padding: 4px 30px;
+  background-color: #000000;
+}
+
+/* line 27, app/assets/stylesheets/common.scss */
+.header .nav-item {
+  display: inline-block;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* line 32, app/assets/stylesheets/common.scss */
+.header-left-nav {
+  float: left;
+}
+
+/* line 34, app/assets/stylesheets/common.scss */
+.header-left-nav form {
+  display: inline-block;
+}
+
+/* line 37, app/assets/stylesheets/common.scss */
+.header-left-nav .form-control {
+  width: 180px;
+  display: inline-block;
+  position: relative;
+  border-radius: 2px;
+  padding-left: 30px;
+}
+
+/* line 45, app/assets/stylesheets/common.scss */
+.header-sharch {
+  position: relative;
+}
+
+/* line 48, app/assets/stylesheets/common.scss */
+.header i {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  font-size: 18px;
+}
+
+/* line 54, app/assets/stylesheets/common.scss */
+.header-right-nav {
+  float: right;
+}
+
+/* line 57, app/assets/stylesheets/common.scss */
+.header-nav-menu {
+  background-color: #fff;
+  border: 3px solid #F6F8F9;
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 10px;
+  padding: 15px;
+  z-index: 1000;
+}
+
+/* line 66, app/assets/stylesheets/common.scss */
+.header-nav-menu li {
+  line-height: 30px;
+  font-size: 16px;
+  padding: 3px 5px;
+}
+
+/* line 74, app/assets/stylesheets/common.scss */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* line 80, app/assets/stylesheets/common.scss */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 180px;
+  margin-top: 64px;
+  padding-top: 90px;
+  background-color: #111;
+  box-sizing: border-box;
+  color: #fff;
+  text-align: center;
+}
+
+/* line 93, app/assets/stylesheets/common.scss */
+.host-icon {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+/* line 101, app/assets/stylesheets/common.scss */
+.required-a::after {
+  content: "必須";
+  color: #fff;
+  background-color: #ff0000a8;
+  font-size: 12px;
+  border-radius: 5px;
+  padding: 4px;
+  margin: 0 5px;
+}
+
+/* line 111, app/assets/stylesheets/common.scss */
+.required-b::before {
+  content: "必須";
+  color: #fff;
+  background-color: #ff0000a8;
+  font-size: 12px;
+  border-radius: 5px;
+  padding: 4px;
+  margin: 0 5px;
+}
+
+/* line 121, app/assets/stylesheets/common.scss */
+.price-icon::before {
+  content: "￥";
+  padding-right: 3px;
+}
+/* line 1, app/assets/stylesheets/device.scss */
+.device {
+  padding-top: 36px;
+  font-size: 16px;
+}
+
+/* line 4, app/assets/stylesheets/device.scss */
+.device p {
+  font-size: 16px;
+}
+
+/* line 7, app/assets/stylesheets/device.scss */
+.device a {
+  color: #007bff !important;
+}
+
+/* line 10, app/assets/stylesheets/device.scss */
+.device_frame {
+  max-width: 600px;
+  text-align: center;
+  padding: 24px;
+  margin: 0px auto;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: rgba(21, 27, 38, 0.15) 0px 1px 3px 0px;
+}
+
+/* line 19, app/assets/stylesheets/device.scss */
+.device_inner {
+  width: 360px;
+  margin: 0px auto;
+}
+/* line 2, app/assets/stylesheets/rooms.scss */
+.room {
+  width: 100%;
+  padding: 30px 60px;
+}
+
+/* line 5, app/assets/stylesheets/rooms.scss */
+.room-frame-inner {
+  border: 1px solid #e2e2e2;
+  margin-bottom: 10px;
+}
+
+/* line 9, app/assets/stylesheets/rooms.scss */
+.room-image-out {
+  position: relative;
+  width: 100%;
+  background: #F6F8F9;
+  height: 200px;
+}
+
+/* line 15, app/assets/stylesheets/rooms.scss */
+.room-image {
+  width: 100%;
+  height: 180px;
+  position: absolute;
+  top: 20px;
+  object-fit: cover;
+}
+
+/* line 22, app/assets/stylesheets/rooms.scss */
+.room-profile {
+  width: 100%;
+  padding: 15px;
+}
+
+/* line 25, app/assets/stylesheets/rooms.scss */
+.room-profile p {
+  word-break: break-all;
+}
+
+/* line 28, app/assets/stylesheets/rooms.scss */
+.room-profile-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #909090;
+}
+
+/* line 33, app/assets/stylesheets/rooms.scss */
+.room-profile-city {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* line 37, app/assets/stylesheets/rooms.scss */
+.room-profile-address {
+  letter-spacing: 1px;
+}
+
+/* line 40, app/assets/stylesheets/rooms.scss */
+.room-profile-price {
+  text-align: right;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+/* line 49, app/assets/stylesheets/rooms.scss */
+.room-show, .reservations-new {
+  padding: 30px 0;
+}
+
+/* line 51, app/assets/stylesheets/rooms.scss */
+.room-show-check-content, .reservations-new-check-content {
+  border-bottom: 1px solid #eaedef;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+/* line 56, app/assets/stylesheets/rooms.scss */
+.room-show-image, .reservations-new-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* line 60, app/assets/stylesheets/rooms.scss */
+.room-show-nav, .reservations-new-nav {
+  padding: 20px;
+  border: 1px solid #eaedef;
+}
+
+/* line 64, app/assets/stylesheets/rooms.scss */
+.room-show-date-serect, .reservations-new-date-serect {
+  padding: 15px 0;
+}
+
+/* line 66, app/assets/stylesheets/rooms.scss */
+.room-show-date-serect label, .reservations-new-date-serect label {
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+/* line 71, app/assets/stylesheets/rooms.scss */
+.room-show-detile, .reservations-new-detile {
+  display: flex;
+  align-items: center;
+}
+
+/* line 74, app/assets/stylesheets/rooms.scss */
+.room-show-detile-content, .reservations-new-detile-content {
+  font-size: 16px;
+  line-height: 30px;
+  padding: 30px 10px;
+  border-top: 1px solid #eaedef;
+  border-bottom: 1px solid #eaedef;
+  word-break: break-all;
+}
+
+/* line 82, app/assets/stylesheets/rooms.scss */
+.room-show-detile-icon, .reservations-new-detile-icon {
+  padding: 10px;
+}
+
+/* line 86, app/assets/stylesheets/rooms.scss */
+.room-show-profile, .reservations-new-profile {
+  padding: 15px;
+}
+
+/* line 88, app/assets/stylesheets/rooms.scss */
+.room-show-profile-name, .reservations-new-profile-name {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 0;
+}
+
+/* line 93, app/assets/stylesheets/rooms.scss */
+.room-show-profile-address, .reservations-new-profile-address {
+  font-size: 14px;
+}
+
+/* line 99, app/assets/stylesheets/rooms.scss */
+.room-new {
+  width: 100%;
+}
+
+/* line 101, app/assets/stylesheets/rooms.scss */
+.room-new .room-nav {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px 15px;
+}
+
+/* line 105, app/assets/stylesheets/rooms.scss */
+.room-new .room-nav li {
+  font-size: 18px;
+  padding: 10px;
+}
+
+/* line 108, app/assets/stylesheets/rooms.scss */
+.room-new .room-nav li a:hover {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+/* line 115, app/assets/stylesheets/rooms.scss */
+.room-new .room-nav-pc {
+  height: 100vh;
+}
+
+/* line 117, app/assets/stylesheets/rooms.scss */
+.room-new .room-nav-pc .active {
+  border-right: 3px solid #4a90e2;
+}
+
+/* line 119, app/assets/stylesheets/rooms.scss */
+.room-new .room-nav-pc .active a {
+  color: #4a90e2;
+}
+
+/* line 124, app/assets/stylesheets/rooms.scss */
+.room-new .room-nav-mobile {
+  height: auto;
+}
+
+/* line 126, app/assets/stylesheets/rooms.scss */
+.room-new .room-nav-mobile li {
+  float: left;
+}
+
+/* line 129, app/assets/stylesheets/rooms.scss */
+.room-new .room-nav-mobile .active {
+  border-bottom: 3px solid #4a90e2;
+}
+
+/* line 131, app/assets/stylesheets/rooms.scss */
+.room-new .room-nav-mobile .active a {
+  color: #4a90e2;
+}
+
+/* line 137, app/assets/stylesheets/rooms.scss */
+.room-new .room-view {
+  background-color: #F6F8F9;
+  border-left: 2px solid #e2e2e2;
+}
+
+/* line 141, app/assets/stylesheets/rooms.scss */
+.room-new .room-view-box {
+  max-width: 880px;
+  background-color: #fff;
+  border: 1px solid #eaedef;
+  margin: 50px auto;
+}
+
+/* line 147, app/assets/stylesheets/rooms.scss */
+.room-new .card-body {
+  padding: 1.25rem 0;
+}
+
+/* line 150, app/assets/stylesheets/rooms.scss */
+.room-new .update-content {
+  border-bottom: 1px solid #eaedef;
+  padding: 20px;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+/* line 155, app/assets/stylesheets/rooms.scss */
+.room-new .update-content label {
+  font-weight: bold;
+}
+
+/* line 160, app/assets/stylesheets/rooms.scss */
+.room-new .icon-box {
+  text-align: center;
+}
+
+/* line 167, app/assets/stylesheets/rooms.scss */
+.room-posts, .reservations {
+  max-width: 100vw;
+  padding: 30px 60px;
+}
+
+/* line 170, app/assets/stylesheets/rooms.scss */
+.room-posts-image, .reservations-image {
+  width: 240px;
+  height: 140px;
+  object-fit: cover;
+}
+
+/* line 175, app/assets/stylesheets/rooms.scss */
+.room-posts table, .reservations table {
+  min-width: 800px;
+}
+
+/* line 178, app/assets/stylesheets/rooms.scss */
+.room-posts table thead th, .reservations table thead th {
+  padding: 8px 15px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* line 183, app/assets/stylesheets/rooms.scss */
+.room-posts table thead tr, .reservations table thead tr {
+  border-top: 1px solid #eaedef;
+  border-bottom: 1px solid #eaedef;
+}
+
+/* line 189, app/assets/stylesheets/rooms.scss */
+.room-posts table tbody tr, .reservations table tbody tr {
+  border-bottom: 1px solid #eaedef;
+}
+
+/* line 191, app/assets/stylesheets/rooms.scss */
+.room-posts table tbody tr:nth-child(even), .reservations table tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+/* line 195, app/assets/stylesheets/rooms.scss */
+.room-posts table tbody td, .reservations table tbody td {
+  padding: 10px;
+}
+
+/* line 198, app/assets/stylesheets/rooms.scss */
+.room-posts table tbody a, .reservations table tbody a {
+  color: #4a90e2;
+  text-decoration: underline;
+}
+
+/* line 202, app/assets/stylesheets/rooms.scss */
+.room-posts table tbody .posts-name, .reservations table tbody .posts-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #909090;
+}
+
+/* line 207, app/assets/stylesheets/rooms.scss */
+.room-posts table tbody .posts-content, .reservations table tbody .posts-content {
+  max-width: 400px;
+}
+/* line 1, app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+}
+
+/* line 5, app/assets/stylesheets/scaffolds.scss */
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 10, app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 15, app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+
+/* line 25, app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 28, app/assets/stylesheets/scaffolds.scss */
+td {
+  padding: 0 5px 7px;
+}
+
+/* line 31, app/assets/stylesheets/scaffolds.scss */
+div.field,
+div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 35, app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 38, app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 43, app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+/* line 50, app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+/* line 59, app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 63, app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/* line 2, app/assets/stylesheets/top.scss */
+.top span {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  color: #fff;
+  font-weight: bold;
+  z-index: 1;
+  margin: auto;
+  text-align: center;
+  font-size: 24px;
+}
+
+/* line 14, app/assets/stylesheets/top.scss */
+.top .form-area-title {
+  font-size: 28px;
+  line-height: 33px;
+  letter-spacing: 1px;
+}
+
+/* line 19, app/assets/stylesheets/top.scss */
+.top .form-fream {
+  height: 650px;
+  display: flex;
+  align-items: center;
+}
+
+/* line 24, app/assets/stylesheets/top.scss */
+.top .form-area {
+  background: #fff;
+  padding: 24px;
+  border-radius: 5px;
+}
+
+/* line 29, app/assets/stylesheets/top.scss */
+.top .top-main {
+  background-image: url("/assets/img_cover_top.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 650px;
+}
+
+/* line 35, app/assets/stylesheets/top.scss */
+.top .section-title {
+  font-size: 24px;
+  margin: 35px 0;
+  font-weight: bold;
+}
+
+/* line 40, app/assets/stylesheets/top.scss */
+.top .panel-image {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
+/* line 1, app/assets/stylesheets/users.scss */
+.user {
+  width: 100%;
+}
+
+/* line 3, app/assets/stylesheets/users.scss */
+.user .user-nav {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px 15px;
+}
+
+/* line 7, app/assets/stylesheets/users.scss */
+.user .user-nav li {
+  font-size: 18px;
+  padding: 10px;
+}
+
+/* line 10, app/assets/stylesheets/users.scss */
+.user .user-nav li a:hover {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+/* line 17, app/assets/stylesheets/users.scss */
+.user .user-nav-pc {
+  height: 100vh;
+}
+
+/* line 19, app/assets/stylesheets/users.scss */
+.user .user-nav-pc .active {
+  border-right: 3px solid #4a90e2;
+}
+
+/* line 21, app/assets/stylesheets/users.scss */
+.user .user-nav-pc .active a {
+  color: #4a90e2;
+}
+
+/* line 26, app/assets/stylesheets/users.scss */
+.user .user-nav-mobile {
+  height: auto;
+}
+
+/* line 28, app/assets/stylesheets/users.scss */
+.user .user-nav-mobile li {
+  float: left;
+}
+
+/* line 31, app/assets/stylesheets/users.scss */
+.user .user-nav-mobile .active {
+  border-bottom: 3px solid #4a90e2;
+}
+
+/* line 33, app/assets/stylesheets/users.scss */
+.user .user-nav-mobile .active a {
+  color: #4a90e2;
+}
+
+/* line 39, app/assets/stylesheets/users.scss */
+.user .user-view {
+  background-color: #F6F8F9;
+  border-left: 2px solid #e2e2e2;
+}
+
+/* line 43, app/assets/stylesheets/users.scss */
+.user .user-view-box {
+  max-width: 880px;
+  background-color: #fff;
+  border: 1px solid #eaedef;
+  margin: 30px auto;
+}
+
+/* line 49, app/assets/stylesheets/users.scss */
+.user .card-body {
+  padding: 1.25rem 0;
+}
+
+/* line 52, app/assets/stylesheets/users.scss */
+.user .update-content {
+  border-bottom: 1px solid #eaedef;
+  padding: 20px;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+/* line 57, app/assets/stylesheets/users.scss */
+.user .update-content label {
+  font-weight: bold;
+}
+
+/* line 62, app/assets/stylesheets/users.scss */
+.user .icon-box {
+  text-align: center;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */

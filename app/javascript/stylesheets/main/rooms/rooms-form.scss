@@ -1,0 +1,50 @@
+.RoomsForm {
+  &__input-group {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    @include xs-device-or-less {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  &__label {
+    color: $text-black;
+    font-size: 16px;
+    line-height: 26px;
+    width: 33%;
+  }
+
+  &__input {
+    width: 66%;
+
+    @include xs-device-or-less {
+      width: 100%
+    }
+  }
+
+  &__button {
+    @include basic-button;
+
+    font-size: 14px;
+    font-weight: 700;
+    height: 45px;
+    line-height: 21px;
+    width: 100%;
+
+    &--submit {
+      @include primary-button;
+
+      margin-bottom: 16px
+    }
+
+    &--cancel {
+      @include secondary-button;
+
+      color: $text-black;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+<section class="container UserSection">
+  <h2>設定</h2>
+
+  <div class="UserContainer">
+    <%= render "/shared/users/side_navigation" %>
+
+    <section class="AccountInformation">
+      <%= render "/shared/users/tab_navigation" %>
+
+      <div class="AccountInformation__header">
+        <h3>プロフィール</h3>
+      </div>
+
+      <%= form_with model: current_user, url: users_profile_path, method: :patch do |f| %>
+        <div class="FileUploadArea AccountInformation__input-group">
+          <%= f.label :image, "アイコン画像", class: "AccountInformation__label" %>
+
+          <p class="FileUploadArea__input-group">
+            <%= image_tag user_icon(current_user), class: "FileUploadArea__image", alt: 'アイコン画像' %>
+
+            <%= f.label :image, "アイコン画像", class: "FileUploadArea__label" do %>
+              <span>画像アップロード</span>
+              <%= f.file_field :image %>
+            <% end %>
+          </p>
+        </div>
+
+        <div class="AccountInformation__input-group">
+          <%= f.label :name, "名前", class: "AccountInformation__label" %>
+
+          <div class="AccountInformation__input-wrapper">
+            <%= f.text_field :name, class: "AccountInformation__input", placeholder: "名前を入力" %>
+            <%= render "shared/error_message", object: current_user, key: "name" %>
+          </div>
+        </div>
+
+        <div class="AccountInformation__input-group">
+          <%= f.label :introduction, "自己紹介", class: "AccountInformation__label" %>
+
+          <div class="AccountInformation__input-wrapper">
+            <%= f.text_area :introduction, class: "AccountInformation__input", placeholder: "自己紹介を入力" %>
+          </div>
+        </div>
+
+        <div class="AccountInformation__buttons">
+          <%= link_to "キャンセル", :back , class: 'btn AccountInformation__button AccountInformation__button--secondary' %>
+          <%= f.submit "保存", class: "btn AccountInformation__button AccountInformation__button--primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,11 @@
+// Bootstrapの既存のスタイルをオーバーライド
+
+.container,
+.container-fluid {
+  max-width: 1440px;
+  padding: 0 32px;
+
+  @include xs-device-or-less {
+    padding: 0 16px;
+  }
+}

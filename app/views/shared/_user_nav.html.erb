@@ -1,0 +1,13 @@
+<div class="col-lg-2 user-nav user-nav-pc d-lg-block d-none">
+  <ul>
+    <li class="<%= "active" if action_name == "account" %>"><%= link_to "アカウント", "/users/account" %></li>
+    <li class="<%= "active" if action_name == "profile" %>"><%= link_to "プロフィール", "/users/profile" %></li>
+  </ul>
+</div>
+
+<div class="col-lg-2 user-nav user-nav-mobile d-lg-none">
+  <ul>
+    <li class="<%= "active" if action_name == "account" %>"><%= link_to "アカウント", "/users/account" %></li>
+    <li class="<%= "active" if action_name == "profile" %>"><%= link_to "プロフィール", "/users/profile" %></li>
+  </ul>
+</div>

@@ -1,0 +1,101 @@
+.Navbar {
+  background-color: $background-navy;
+  height: 80px;
+
+  @include xs-device-or-less {
+    height: 66px;
+  }
+
+  &__logo {
+    width: 221px;
+
+    @include xs-device-or-less {
+      width: 109px;
+    }
+  }
+}
+
+.NavItem {
+  &__link {
+    color: $white;
+    font-size: 12px;
+    line-height: 18px;
+
+    &:hover {
+      color: $white;
+    }
+
+    &--login {
+      margin-right: 32px;
+
+      @include xs-device-or-less {
+        margin-right: 16px;
+      }
+    }
+
+    &--register {
+      @include primary-button;
+    }
+  }
+}
+
+.NavProfile {
+  cursor: pointer;
+
+  &__avatar {
+    border-radius: 60px;
+    margin-right: 8px;
+    width: 40px;
+  }
+
+  &__name {
+    color: $white;
+    font-size: 16px;
+    line-height: 24px;
+    margin-right: 10px;
+  }
+
+  &__icon {
+    color: $white;
+    stroke: white;
+    stroke-width: 2px;
+    width: 8px;
+  }
+}
+
+.DropdownMenu {
+  min-width: 122px;
+  padding: 9px 0;
+
+  &[data-bs-popper] {
+    @include xs-device-or-less {
+      left: -100% !important;
+    }
+  }
+
+  &__item {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 0 8px;
+
+    &--middle {
+      margin: 8px 0;
+    }
+
+    > a {
+      color: $text-black;
+      display: block;
+      width: 100%;
+    }
+
+    &--danger {
+      > a {
+        color: $primary-red;
+      }
+    }
+  }
+
+  &__hr {
+    margin: 0.5rem 0;
+  }
+}

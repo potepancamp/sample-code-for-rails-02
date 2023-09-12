@@ -1,0 +1,10 @@
+<div class="col-lg-2 room-nav room-nav-pc d-lg-block d-none">
+    <ul>
+        <li class="<%= "active" if action_name == "new" or action_name == "edit" %>"><%= link_to "基本情報", "/rooms/new" %></li>
+    </ul>
+</div>
+<div class="col-lg-2 room-nav room-nav-mobile d-lg-none">
+    <ul>
+        <li class="<%= "active" if action_name == "new" or action_name == "edit" %>"><%= link_to "基本情報", "/rooms/new" %></li>
+    </ul>
+</div>

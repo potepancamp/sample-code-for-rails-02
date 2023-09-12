@@ -1,0 +1,9 @@
+<ul class="SideNavigation">
+  <li class="SideNavigation__item <%= active_class_if_account_page %>">
+    <%= link_to "アカウント", users_account_path %>
+  </li>
+
+  <li class="SideNavigation__item <%= active_class_if_profile_page %>">
+    <%= link_to "プロフィール", users_profile_path %>
+  </li>
+</ul>

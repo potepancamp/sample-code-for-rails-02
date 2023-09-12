@@ -1,0 +1,80 @@
+<section class="container OwnRoomsContainer">
+  <h2>
+    登録済み一覧
+  </h2>
+
+  <div class="table-responsive">
+    <table class="table align-middle OwnRoomsTable">
+      <thead>
+        <tr>
+          <th>画像</th>
+          <th>施設名</th>
+          <th>紹介文</th>
+          <th>料金</th>
+          <th>作成日</th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @rooms.each do |room| %>
+          <tr>
+            <td>
+              <%= link_to image_tag(room_image(room)), room_path(room) %>
+            </td>
+
+            <td>
+              <%= link_to room.name, room_path(room) %>
+            </td>
+
+            <td>
+              <%= room.content %>
+            </td>
+
+            <td class="text-nowrap">
+              ¥<%= room.price.to_s(:delimited) %>~
+            </td>
+
+            <td class="text-nowrap">
+              <%= room.created_at.to_s(:datetime_jp) %>
+            </td>
+
+            <td>
+              <div class="dropdown">
+                <div class="d-flex align-items-center justify-content-center" id="dropdown-button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <%= image_tag "icons/three-dot-menu.svg", alt: "3点メニューアイコン" %>
+                </div>
+
+                <ul class="dropdown-menu DropdownMenu" aria-labelledby="dropdown-button">
+                  <li class="DropdownMenu__item">
+                    <%= link_to "編集", edit_room_path(room) %>
+                  </li>
+
+                  <li class="DropdownMenu__item DropdownMenu__item--danger">
+                    <%= link_to "施設を削除",
+                                room,
+                                method: :delete,
+                                title: "以下の施設を削除しますか？",
+                                data: {
+                                  confirm: "<div class='ConfirmBody'>
+                                              #{image_tag(room_image(room), class: 'ConfirmBody__image')}
+                                              <div>
+                                                #{room.name}<br>
+                                                ¥&nbsp;#{room.price.to_s(:delimited)}~&nbsp;/&nbsp;日
+                                              </div>
+                                            </div>
+                                            よろしければ「削除」ボタンを押してください。",
+                                  commit: "削除",
+                                  cancel: "キャンセル"
+                                }
+                    %>
+                  </li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</section>

@@ -1,0 +1,85 @@
+// bootstrap-material-datetimepickerのカスタマイズ
+// URL: https://github.com/T00rk/bootstrap-material-datetimepicker
+
+@import "./_color-variables";
+
+.dtp {
+  .dtp-content {
+    border-radius: 6px;
+    max-width: 360px !important;
+  }
+
+  .dtp-header {
+    display: none;
+  }
+
+  .dtp-date {
+    background: transparent !important;
+    padding: 28px !important;
+    position: absolute;
+    width: 100%;
+
+    .dtp-actual-num,
+    .dtp-actual-month,
+    .dtp-actual-year {
+      display: none;
+    }
+
+    > div {
+      &:first-of-type {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .clearfix {
+          display: none;
+        }
+      }
+
+      &:last-of-type {
+        display: none;
+      }
+    }
+  }
+
+  .p10 {
+    height: 24px;
+
+    > a {
+      color: $text-black;
+    }
+  }
+
+  .dtp-picker {
+    padding: 28px 28px 0 !important;
+
+    .dtp-picker-month {
+      padding-bottom: 10px !important;
+    }
+
+    .dtp-picker-days {
+      thead {
+        height: 40px;
+      }
+
+      th {
+        border-bottom: none;
+      }
+
+      td {
+        > a {
+          font-size: 14px !important;
+          padding: 10px !important;
+
+          &.selected {
+            background: $primary-blue !important;
+          }
+        }
+      }
+    }
+  }
+
+  .dtp-buttons {
+    padding: 0 22px 14px !important;
+  }
+}

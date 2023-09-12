@@ -1,0 +1,58 @@
+/* line 2, app/assets/stylesheets/top.scss */
+.top span {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  color: #fff;
+  font-weight: bold;
+  z-index: 1;
+  margin: auto;
+  text-align: center;
+  font-size: 24px;
+}
+
+/* line 14, app/assets/stylesheets/top.scss */
+.top .form-area-title {
+  font-size: 28px;
+  line-height: 33px;
+  letter-spacing: 1px;
+}
+
+/* line 19, app/assets/stylesheets/top.scss */
+.top .form-fream {
+  height: 650px;
+  display: flex;
+  align-items: center;
+}
+
+/* line 24, app/assets/stylesheets/top.scss */
+.top .form-area {
+  background: #fff;
+  padding: 24px;
+  border-radius: 5px;
+}
+
+/* line 29, app/assets/stylesheets/top.scss */
+.top .top-main {
+  background-image: url("/assets/img_cover_top.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 650px;
+}
+
+/* line 35, app/assets/stylesheets/top.scss */
+.top .section-title {
+  font-size: 24px;
+  margin: 35px 0;
+  font-weight: bold;
+}
+
+/* line 40, app/assets/stylesheets/top.scss */
+.top .panel-image {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 25px;
+}

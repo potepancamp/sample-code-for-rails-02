@@ -1,0 +1,297 @@
+/* line 2, app/assets/stylesheets/rooms.scss */
+.room {
+  width: 100%;
+  padding: 30px 60px;
+}
+
+/* line 5, app/assets/stylesheets/rooms.scss */
+.room-frame-inner {
+  border: 1px solid #e2e2e2;
+  margin-bottom: 10px;
+}
+
+/* line 9, app/assets/stylesheets/rooms.scss */
+.room-image-out {
+  position: relative;
+  width: 100%;
+  background: #F6F8F9;
+  height: 200px;
+}
+
+/* line 15, app/assets/stylesheets/rooms.scss */
+.room-image {
+  width: 100%;
+  height: 180px;
+  position: absolute;
+  top: 20px;
+  object-fit: cover;
+}
+
+/* line 22, app/assets/stylesheets/rooms.scss */
+.room-profile {
+  width: 100%;
+  padding: 15px;
+}
+
+/* line 25, app/assets/stylesheets/rooms.scss */
+.room-profile p {
+  word-break: break-all;
+}
+
+/* line 28, app/assets/stylesheets/rooms.scss */
+.room-profile-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #909090;
+}
+
+/* line 33, app/assets/stylesheets/rooms.scss */
+.room-profile-city {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* line 37, app/assets/stylesheets/rooms.scss */
+.room-profile-address {
+  letter-spacing: 1px;
+}
+
+/* line 40, app/assets/stylesheets/rooms.scss */
+.room-profile-price {
+  text-align: right;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+/* line 49, app/assets/stylesheets/rooms.scss */
+.room-show, .reservations-new {
+  padding: 30px 0;
+}
+
+/* line 51, app/assets/stylesheets/rooms.scss */
+.room-show-check-content, .reservations-new-check-content {
+  border-bottom: 1px solid #eaedef;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+/* line 56, app/assets/stylesheets/rooms.scss */
+.room-show-image, .reservations-new-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* line 60, app/assets/stylesheets/rooms.scss */
+.room-show-nav, .reservations-new-nav {
+  padding: 20px;
+  border: 1px solid #eaedef;
+}
+
+/* line 64, app/assets/stylesheets/rooms.scss */
+.room-show-date-select, .reservations-new-date-select {
+  padding: 15px 0;
+}
+
+/* line 66, app/assets/stylesheets/rooms.scss */
+.room-show-date-select label, .reservations-new-date-select label {
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+/* line 71, app/assets/stylesheets/rooms.scss */
+.room-show-detile, .reservations-new-detile {
+  display: flex;
+  align-items: center;
+}
+
+/* line 74, app/assets/stylesheets/rooms.scss */
+.room-show-detile-content, .reservations-new-detile-content {
+  font-size: 16px;
+  line-height: 30px;
+  padding: 30px 10px;
+  border-top: 1px solid #eaedef;
+  border-bottom: 1px solid #eaedef;
+  word-break: break-all;
+}
+
+/* line 82, app/assets/stylesheets/rooms.scss */
+.room-show-detile-icon, .reservations-new-detile-icon {
+  padding: 10px;
+}
+
+/* line 86, app/assets/stylesheets/rooms.scss */
+.room-show-profile, .reservations-new-profile {
+  padding: 15px;
+}
+
+/* line 88, app/assets/stylesheets/rooms.scss */
+.room-show-profile-name, .reservations-new-profile-name {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 0;
+}
+
+/* line 93, app/assets/stylesheets/rooms.scss */
+.room-show-profile-address, .reservations-new-profile-address {
+  font-size: 14px;
+}
+
+/* line 99, app/assets/stylesheets/rooms.scss */
+.room-new {
+  width: 100%;
+}
+
+/* line 101, app/assets/stylesheets/rooms.scss */
+.room-new .room-nav {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px 15px;
+}
+
+/* line 105, app/assets/stylesheets/rooms.scss */
+.room-new .room-nav li {
+  font-size: 18px;
+  padding: 10px;
+}
+
+/* line 108, app/assets/stylesheets/rooms.scss */
+.room-new .room-nav li a:hover {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+/* line 115, app/assets/stylesheets/rooms.scss */
+.room-new .room-nav-pc {
+  height: 100vh;
+}
+
+/* line 117, app/assets/stylesheets/rooms.scss */
+.room-new .room-nav-pc .active {
+  border-right: 3px solid #4a90e2;
+}
+
+/* line 119, app/assets/stylesheets/rooms.scss */
+.room-new .room-nav-pc .active a {
+  color: #4a90e2;
+}
+
+/* line 124, app/assets/stylesheets/rooms.scss */
+.room-new .room-nav-mobile {
+  height: auto;
+}
+
+/* line 126, app/assets/stylesheets/rooms.scss */
+.room-new .room-nav-mobile li {
+  float: left;
+}
+
+/* line 129, app/assets/stylesheets/rooms.scss */
+.room-new .room-nav-mobile .active {
+  border-bottom: 3px solid #4a90e2;
+}
+
+/* line 131, app/assets/stylesheets/rooms.scss */
+.room-new .room-nav-mobile .active a {
+  color: #4a90e2;
+}
+
+/* line 137, app/assets/stylesheets/rooms.scss */
+.room-new .room-view {
+  background-color: #F6F8F9;
+  border-left: 2px solid #e2e2e2;
+}
+
+/* line 141, app/assets/stylesheets/rooms.scss */
+.room-new .room-view-box {
+  max-width: 880px;
+  background-color: #fff;
+  border: 1px solid #eaedef;
+  margin: 50px auto;
+}
+
+/* line 147, app/assets/stylesheets/rooms.scss */
+.room-new .card-body {
+  padding: 1.25rem 0;
+}
+
+/* line 150, app/assets/stylesheets/rooms.scss */
+.room-new .update-content {
+  border-bottom: 1px solid #eaedef;
+  padding: 20px;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+/* line 155, app/assets/stylesheets/rooms.scss */
+.room-new .update-content label {
+  font-weight: bold;
+}
+
+/* line 160, app/assets/stylesheets/rooms.scss */
+.room-new .icon-box {
+  text-align: center;
+}
+
+/* line 167, app/assets/stylesheets/rooms.scss */
+.room-posts, .reservations {
+  max-width: 100vw;
+  padding: 30px 60px;
+}
+
+/* line 170, app/assets/stylesheets/rooms.scss */
+.room-posts-image, .reservations-image {
+  width: 240px;
+  height: 140px;
+  object-fit: cover;
+}
+
+/* line 175, app/assets/stylesheets/rooms.scss */
+.room-posts table, .reservations table {
+  min-width: 800px;
+}
+
+/* line 178, app/assets/stylesheets/rooms.scss */
+.room-posts table thead th, .reservations table thead th {
+  padding: 8px 15px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* line 183, app/assets/stylesheets/rooms.scss */
+.room-posts table thead tr, .reservations table thead tr {
+  border-top: 1px solid #eaedef;
+  border-bottom: 1px solid #eaedef;
+}
+
+/* line 189, app/assets/stylesheets/rooms.scss */
+.room-posts table tbody tr, .reservations table tbody tr {
+  border-bottom: 1px solid #eaedef;
+}
+
+/* line 191, app/assets/stylesheets/rooms.scss */
+.room-posts table tbody tr:nth-child(even), .reservations table tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+/* line 195, app/assets/stylesheets/rooms.scss */
+.room-posts table tbody td, .reservations table tbody td {
+  padding: 10px;
+}
+
+/* line 198, app/assets/stylesheets/rooms.scss */
+.room-posts table tbody a, .reservations table tbody a {
+  color: #4a90e2;
+  text-decoration: underline;
+}
+
+/* line 202, app/assets/stylesheets/rooms.scss */
+.room-posts table tbody .posts-name, .reservations table tbody .posts-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #909090;
+}
+
+/* line 207, app/assets/stylesheets/rooms.scss */
+.room-posts table tbody .posts-content, .reservations table tbody .posts-content {
+  max-width: 400px;
+}

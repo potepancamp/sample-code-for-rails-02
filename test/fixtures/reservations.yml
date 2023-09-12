@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_date: 2020-10-13
+  end_date: 2020-10-13
+  total_amount: 1
+  user_id: one
+  room_id: one
+
+two:
+  start_date: 2020-10-13
+  end_date: 2020-10-13
+  total_amount: 1
+  user_id: two
+  room_id: two

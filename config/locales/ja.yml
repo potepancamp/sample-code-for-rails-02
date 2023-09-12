@@ -1,0 +1,25 @@
+ja:
+  activerecord:
+    attributes:
+      room:
+        name: 施設名
+        content: 施設詳細
+        price: 料金
+        address: 住所
+        image: 施設画像
+      reservation:
+        start_date: チェックイン日
+        end_date: チェックアウト日
+        person_num: 人数
+    errors:
+      models:
+        room:
+          attributes:
+            name:
+              blank: "は必須です。"
+            content:
+              blank: "は必須です。"
+            price:
+              blank: "は必須です。"
+            address:
+              blank: "は必須です。"

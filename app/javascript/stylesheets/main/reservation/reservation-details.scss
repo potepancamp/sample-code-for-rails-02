@@ -1,0 +1,45 @@
+.ReservationDetails {
+  &__image {
+    margin-bottom: 24px;
+    width: 100%;
+  }
+
+  &__title {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    @include xs-device-or-less {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  &__room-name {
+    @include room-name;
+
+    @include xs-device-or-less {
+      font-size: 21px;
+      line-height: 28px;
+    }
+  }
+
+  &__room-price {
+    @include room-price;
+
+    margin-bottom: 0;
+  }
+
+  &__room-address {
+    @include room-address;
+
+    margin-bottom: 15px;
+  }
+
+  &__room-content {
+    color: #172432;
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 24px;
+  }
+}

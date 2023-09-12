@@ -1,0 +1,5 @@
+<% if errors.present? && errors.has_key?(key) %>
+  <p class="ErrorMessage">
+    <%= "#{key_jp}#{errors[key].first}" %>
+  </p>
+<% end %>

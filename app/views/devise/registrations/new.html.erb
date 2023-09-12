@@ -1,0 +1,39 @@
+<div class="AccountFormWrapper">
+  <section class="AccountFormContainer">
+    <h2 class="AccountFormContainer__title">新規登録</h2>
+
+    <%= form_with model: @user, url: user_registration_path, class: "Form AccountForm" do |f| %>
+      <div class="mb-3">
+        <%= f.label :name, "ユーザー名", class: "form-label Form__label--required" %>
+        <%= f.text_field :name, class: "form-control", placeholder: "ユーザー名を入力", autocomplete: "name" %>
+
+        <%= render "shared/error_message", object: @user, key: "name" %>
+      </div>
+
+      <div class="mb-3">
+        <%= f.label :email, "メールアドレス", class: "form-label Form__label--required" %>
+        <%= f.text_field :email, class: "form-control", placeholder: "メールアドレスを入力", autocomplete: "email", type: "email" %>
+
+        <%= render "shared/error_message", object: @user, key: "email" %>
+      </div>
+
+      <div class="mb-3">
+        <%= f.label :password, "パスワード", class: "form-label Form__label--required" %>
+        <%= f.password_field :password, class: "form-control", placeholder: "パスワードを入力" %>
+
+        <%= render "shared/error_message", object: @user, key: "password" %>
+      </div>
+
+      <div class="mb-3">
+        <%= f.label :password_confirmation, "確認用パスワード", class: "form-label Form__label--required" %>
+        <%= f.password_field :password_confirmation, class: "form-control", placeholder: "確認用パスワードを入力" %>
+
+        <%= render "shared/error_message", object: @user, key: "password_confirmation" %>
+      </div>
+
+      <%= f.submit "新しいアカウントを作成", class: "btn mb-3 AccountForm__button AccountForm__button--primary" %>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
+  </section>
+</div>

@@ -1,0 +1,7 @@
+<%- if controller_name != 'sessions' %>
+  <%= link_to "アカウントをお持ちの方はログイン", new_session_path(resource_name), class: "btn AccountForm__button AccountForm__button--secondary" %>
+<% end %>
+
+<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+  <%= link_to "新しいアカウントを作成", new_registration_path(resource_name), class: "btn AccountForm__button AccountForm__button--secondary" %>
+<% end %>
