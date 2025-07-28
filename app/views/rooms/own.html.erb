@@ -32,11 +32,11 @@
             </td>
 
             <td class="text-nowrap">
-              ¥<%= room.price.to_s(:delimited) %>~
+              ¥<%= number_with_delimiter(room.price) %>~
             </td>
 
             <td class="text-nowrap">
-              <%= room.created_at.to_s(:datetime_jp) %>
+              <%= room.created_at.strftime('%Y/%m/%d') %>
             </td>
 
             <td>
@@ -60,7 +60,7 @@
                                               #{image_tag(room_image(room), class: 'ConfirmBody__image')}
                                               <div>
                                                 #{room.name}<br>
-                                                ¥&nbsp;#{room.price.to_s(:delimited)}~&nbsp;/&nbsp;日
+                                                ¥&nbsp;#{number_with_delimiter(room.price)}~&nbsp;/&nbsp;日
                                               </div>
                                             </div>
                                             よろしければ「削除」ボタンを押してください。",

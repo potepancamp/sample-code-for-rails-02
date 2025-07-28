@@ -25,7 +25,7 @@
         </p>
 
         <p class="RoomDetails__price">
-          ¥<%= @room.price.to_s(:delimited) %>~
+          ¥<%= number_with_delimiter(@room.price) %>~
         </p>
       </div>
 

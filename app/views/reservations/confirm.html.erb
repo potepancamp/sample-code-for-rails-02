@@ -11,12 +11,12 @@
 
       <div class="ReservationConfirm__value-group">
         <p class="ReservationConfirm__label">チェックイン</p>
-        <p class="ReservationConfirm__value"><%= @reservation.start_date.to_s(:date_jp) %></p>
+        <p class="ReservationConfirm__value"><%= @reservation.start_date.strftime('%Y/%m/%d') %></p>
       </div>
 
       <div class="ReservationConfirm__value-group">
         <p class="ReservationConfirm__label">チェックアウト</p>
-        <p class="ReservationConfirm__value"><%= @reservation.end_date.to_s(:date_jp) %></p>
+        <p class="ReservationConfirm__value"><%= @reservation.end_date.strftime('%Y/%m/%d') %></p>
       </div>
 
       <div class="ReservationConfirm__value-group">
@@ -31,7 +31,7 @@
 
       <div class="ReservationConfirm__value-group">
         <p class="ReservationConfirm__label">お支払い金額</p>
-        <p class="ReservationConfirm__value ReservationConfirm__value--price">¥<%= @reservation.total_amount.to_s(:delimited) %></p>
+        <p class="ReservationConfirm__value ReservationConfirm__value--price">¥<%= number_with_delimiter(@reservation.total_amount) %></p>
       </div>
 
       <p class="ReservationConfirm__description">

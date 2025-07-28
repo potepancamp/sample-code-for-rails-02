@@ -27,7 +27,7 @@
 
           <div class="RoomFooter">
             <p class="Room__price">
-              ¥<%= room.price.to_s(:delimited) %>~
+              ¥<%= number_with_delimiter(room.price) %>~
             </p>
 
             <%= link_to "詳細はこちら", room_url(room), class: "Room__link" %>
