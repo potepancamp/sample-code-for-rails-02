@@ -1,4 +1,4 @@
-<%= form_with model: @room, data: { turbo: false }, class: "Form RoomsForm" do |f| %>
+<%= form_with model: @room, local: true, class: "Form RoomsForm" do |f| %>
   <div class="RoomsForm__input-group">
     <%= f.label :name, "施設名", class: "form-label RoomsForm__label Form__label--required" %>
 

@@ -2,7 +2,7 @@
   <section class="FormContainer">
     <h2>予約内容の確認</h2>
 
-    <%= form_with model: @reservation, data: { turbo: false }, class: "Form ReservationConfirm" do |f| %>
+    <%= form_with model: @reservation, local: true, class: "Form ReservationConfirm" do |f| %>
       <%= f.hidden_field :room_id %>
       <%= f.hidden_field :user_id %>
       <%= f.hidden_field :start_date %>
