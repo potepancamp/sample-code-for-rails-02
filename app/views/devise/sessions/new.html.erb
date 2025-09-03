@@ -2,7 +2,7 @@
   <section class="AccountFormContainer">
     <h2 class="AccountFormContainer__title">ログイン</h2>
 
-    <%= form_with model: @user, url: user_session_path, class: "Form AccountForm" do |f| %>
+    <%= form_with model: @user, url: user_session_path, data: { turbo: false }, class: "Form AccountForm" do |f| %>
       <div class="mb-3">
         <%= f.label :email, "メールアドレス", class: "form-label" %>
         <%= f.text_field :email, class: "form-control", placeholder: "メールアドレスを入力", autocomplete: "email", type: "email" %>

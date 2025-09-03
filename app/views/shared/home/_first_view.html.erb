@@ -7,7 +7,7 @@
     </h2>
 
     <div class="FirstViewSearch">
-      <%= form_with url: rooms_url, method: :get do |f| %>
+      <%= form_with url: rooms_url, data: { turbo: false }, method: :get do |f| %>
         <%= f.text_field "area", class: "form-control FirstViewSearch__input", placeholder: "エリア名を入力" %>
         <%= f.submit "検索", class: "btn FirstViewSearch__button" %>
       <% end %>
