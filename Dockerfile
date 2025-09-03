@@ -1,7 +1,7 @@
 FROM ruby:3.3.3
 
 # Node.jsとYarnをインストール
-RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
     && apt-get install -y nodejs
 
 RUN npm install --global yarn
@@ -32,6 +32,9 @@ RUN yarn install
 
 # アプリケーションのコードをコピー
 COPY . .
+
+# JavaScriptとCSSをビルド
+RUN yarn build
 
 # アセットをプリコンパイル
 RUN bundle exec rails assets:precompile

@@ -16,8 +16,19 @@
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
+  "engines": {
+    "node": "20.x",
+    "npm": "9.x"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.6",
+    "esbuild-sass-plugin": "^2.16.0",
+    "sass": "^1.69.0",
+    "webpack-dev-server": "^3.11.0"
+  },
   "scripts": {
-    "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets",
-    "watch": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets --watch"
+    "build": "esbuild app/javascript/application.js --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets",
+    "watch": "esbuild app/javascript/application.js --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets --watch",
+    "build:css": "sass app/assets/stylesheets/application.scss app/assets/builds/application.css --style=compressed --source-map"
   }
 }
