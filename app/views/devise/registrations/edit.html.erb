@@ -11,7 +11,7 @@
         <h3>アカウント</h3>
       </div>
 
-      <%= form_with model: @user, url: user_registration_path do |f| %>
+      <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
         <div class="mb-4 AccountInformation__input-group">
           <%= f.label :email, "メールアドレス", class: "AccountInformation__label" %>
 

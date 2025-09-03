@@ -1,25 +1,35 @@
 {
   "name": "airbnb_demo",
   "private": true,
-  "engines": {
-    "node": "14.15.0"
-  },
   "dependencies": {
+    "@hotwired/stimulus": "^3.2.2",
+    "@hotwired/turbo-rails": "^8.0.4",
     "@popperjs/core": "^2.11.6",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
-    "@rails/webpacker": "4.3.0",
     "bootstrap": "3",
     "data-confirm-modal": "^1.6.2",
+    "esbuild": "^0.25.6",
     "import-glob-loader": "^1.1.0",
     "jquery": "^3.6.1",
-    "node-sass": "4.14.1",
     "popper.js": "^1.16.1",
-    "turbolinks": "^5.2.0"
+    "sass": "^1.69.0"
   },
   "version": "0.1.0",
+  "engines": {
+    "node": "20.x",
+    "npm": "9.x"
+  },
   "devDependencies": {
+    "esbuild": "^0.25.6",
+    "esbuild-sass-plugin": "^2.16.0",
+    "sass": "^1.69.0",
     "webpack-dev-server": "^3.11.0"
+  },
+  "scripts": {
+    "build": "esbuild app/javascript/application.js --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets",
+    "watch": "esbuild app/javascript/application.js --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets --watch",
+    "build:css": "sass app/assets/stylesheets/application.scss app/assets/builds/application.css --style=compressed --source-map"
   }
 }

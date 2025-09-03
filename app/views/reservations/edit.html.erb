@@ -11,7 +11,7 @@
         </span>
 
         <span class="ReservationDetails__room-price">
-          ¥<%= @reservation.room.price.to_s(:delimited) %>~
+                      ¥<%= number_with_delimiter(@reservation.room.price) %>~
         </span>
       </div>
 
@@ -26,21 +26,21 @@
       </p>
     </div>
 
-    <%= form_with model: @reservation, url: confirm_reservations_path, class: "Form ReservationsForm", method: :post do |f| %>
+    <%= form_with model: @reservation, url: confirm_reservations_path, local: true, class: "Form ReservationsForm", method: :post do |f| %>
       <%= hidden_field_tag "reservation[id]", @reservation.id %>
       <%= hidden_field_tag "reservation[room_id]", @reservation.room.id %>
 
       <div class="ReservationsForm__input-group">
         <%= f.label :start_date, "チェックイン", class: "form-label ReservationsForm__label Form__label--required" %>
 
-        <%= f.text_field :start_date, value: @reservation.start_date.to_s(:date_jp), class: "form-control js-picker", placeholder: "---- / -- / --" %>
+        <%= f.text_field :start_date, value: @reservation.start_date.strftime('%Y/%m/%d'), class: "form-control js-picker", placeholder: "---- / -- / --" %>
         <%= render "shared/error_message", object: @reservation, key: "start_date" %>
       </div>
 
       <div class="ReservationsForm__input-group">
         <%= f.label :end_date, "チェックアウト", class: "form-label ReservationsForm__label Form__label--required" %>
 
-        <%= f.text_field :end_date, value: @reservation.end_date.to_s(:date_jp), class: "form-control js-picker", placeholder: "---- / -- / --" %>
+        <%= f.text_field :end_date, value: @reservation.end_date.strftime('%Y/%m/%d'), class: "form-control js-picker", placeholder: "---- / -- / --" %>
         <%= render "shared/error_message", object: @reservation, key: "end_date" %>
       </div>
 

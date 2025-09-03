@@ -1,0 +1,33 @@
+@import "_break-point";
+@import "_color-variables";
+@import "_font-variables";
+@import "_mixins";
+
+// Main directory files
+@import "./main/bootstrap";
+@import "./main/common";
+@import "./main/account-form";
+@import "./main/confirm-modal";
+@import "./main/date-picker";
+@import "./main/footer";
+@import "./main/form";
+@import "./main/header";
+@import "./main/search-room-form";
+@import "./main/snack-bar";
+@import "./main/users";
+
+// Home subdirectory
+@import "./main/home/first-view";
+@import "./main/home/recommend-area";
+
+// Reservation subdirectory
+@import "./main/reservation/reservation-confirm";
+@import "./main/reservation/reservation-details";
+@import "./main/reservation/reservations";
+@import "./main/reservation/reservations-form";
+
+// Rooms subdirectory
+@import "./main/rooms/own-rooms";
+@import "./main/rooms/room-details";
+@import "./main/rooms/rooms";
+@import "./main/rooms/rooms-form";

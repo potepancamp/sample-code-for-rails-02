@@ -34,19 +34,19 @@
             </td>
 
             <td class="text-nowrap">
-              ¥<%= reservation.total_amount.to_s(:delimited) %>
+              ¥<%= number_with_delimiter(reservation.total_amount) %>
             </td>
 
             <td class="text-nowrap">
-              <%= reservation.start_date.to_s(:date_jp) %>
+              <%= reservation.start_date.strftime('%Y/%m/%d') %>
             </td>
 
             <td class="text-nowrap">
-              <%= reservation.end_date.to_s(:date_jp) %>
+              <%= reservation.end_date.strftime('%Y/%m/%d') %>
             </td>
 
             <td class="text-nowrap">
-              <%= reservation.created_at.to_s(:datetime_jp_detail) %>
+              <%= reservation.created_at.strftime('%Y/%m/%d %H:%M') %>
             </td>
 
             <td>
@@ -70,9 +70,9 @@
                                               #{image_tag(room_image(reservation.room), class: 'ConfirmBody__image')}
                                               <div>
                                                 #{reservation.room.name}<br>
-                                                #{reservation.start_date.to_s(:date_jp)}&nbsp;〜&nbsp;#{reservation.end_date.to_s(:date_jp)}<br>
+                                                #{reservation.start_date.strftime('%Y/%m/%d')}&nbsp;〜&nbsp;#{reservation.end_date.strftime('%Y/%m/%d')}<br>
                                                 #{reservation.person_num}人<br>
-                                                ¥&nbsp;#{reservation.total_amount.to_s(:delimited)}
+                                                ¥&nbsp;#{number_with_delimiter(reservation.total_amount)}
                                               </div>
                                             </div>
                                             よろしければ「削除」ボタンを押してください。",
