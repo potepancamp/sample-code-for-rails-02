@@ -284,9 +284,6 @@ GEM
     turbo-rails (2.0.16)
       actionpack (>= 7.1.0)
       railties (>= 7.1.0)
-    turbolinks (5.2.1)
-      turbolinks-source (~> 5.2)
-    turbolinks-source (5.2.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     useragent (0.16.11)
@@ -344,7 +341,6 @@ DEPENDENCIES
   spring
   spring-watcher-listen
   turbo-rails
-  turbolinks
   tzinfo-data
   web-console
   webdrivers
