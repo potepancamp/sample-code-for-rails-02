@@ -39,7 +39,7 @@
             <hr class="DropdownMenu__hr">
 
             <li class="DropdownMenu__item">
-              <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+              <%= link_to "ログアウト", destroy_user_session_path, data: { "turbo-method": :delete } %>
             </li>
           </ul>
         </div>

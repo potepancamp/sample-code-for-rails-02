@@ -1,3 +1,4 @@
+import "@hotwired/turbo-rails"
 require('popper.js')
 require('bootstrap')
 require("@rails/ujs").start()
