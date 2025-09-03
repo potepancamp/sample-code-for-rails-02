@@ -40,7 +40,7 @@
       </p>
 
       <div class="ReservationForm">
-        <%= form_with model: @reservation, local: true, url: confirm_reservations_path do |f| %>
+        <%= form_with model: @reservation, local: true, data: { turbo: false }, url: confirm_reservations_path do |f| %>
           <%= hidden_field_tag "reservation[room_id]", @room.id %>
 
           <div class="ReservationForm__input-container">
