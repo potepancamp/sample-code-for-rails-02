@@ -61,24 +61,11 @@
                   </li>
 
                   <li class="DropdownMenu__item DropdownMenu__item--danger">
-                    <%= link_to "予約を削除",
-                                reservation,
+                    <%= button_to "予約を削除",
+                                reservation_path(reservation),
                                 method: :delete,
-                                title: "以下の施設を削除しますか？",
-                                data: {
-                                  confirm: "<div class='ConfirmBody'>
-                                              #{image_tag(room_image(reservation.room), class: 'ConfirmBody__image')}
-                                              <div>
-                                                #{reservation.room.name}<br>
-                                                #{reservation.start_date.strftime('%Y/%m/%d')}&nbsp;〜&nbsp;#{reservation.end_date.strftime('%Y/%m/%d')}<br>
-                                                #{reservation.person_num}人<br>
-                                                ¥&nbsp;#{number_with_delimiter(reservation.total_amount)}
-                                              </div>
-                                            </div>
-                                            よろしければ「削除」ボタンを押してください。",
-                                  commit: "削除",
-                                  cancel: "キャンセル"
-                                }
+                                class: "DropdownMenu__delete-button",
+                                form: { data: { turbo_confirm: "#{reservation.room.name}\n#{reservation.start_date.strftime('%Y/%m/%d')} 〜 #{reservation.end_date.strftime('%Y/%m/%d')}\n#{reservation.person_num}人\n¥ #{number_with_delimiter(reservation.total_amount)}\n\nこの予約を削除しますか？" } }
                     %>
                   </li>
                 </ul>

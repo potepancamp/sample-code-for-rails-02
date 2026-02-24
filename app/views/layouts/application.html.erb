@@ -25,16 +25,19 @@
     <%= javascript_include_tag 'application', 'data-turbo-track': 'reload', type: 'module' %>
 
     <script>
-      $(function(){
+      function initDatePicker() {
         $(".js-picker").bootstrapMaterialDatePicker({
           time: false,
-          weekStart :0,
+          weekStart: 0,
           switchOnClick: true,
           format: "YYYY/MM/DD",
           okText: "OK",
           clearText: "キャンセル"
-        })
-      })
+        });
+      }
+
+      $(document).ready(initDatePicker);
+      document.addEventListener("turbo:load", initDatePicker);
     </script>
   </head>
 

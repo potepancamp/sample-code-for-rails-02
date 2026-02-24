@@ -1,6 +1,12 @@
 ja:
   activerecord:
     attributes:
+      user:
+        name: ユーザー名
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: 確認用パスワード
+        image: プロフィール画像
       room:
         name: 施設名
         content: 施設詳細
@@ -13,13 +19,31 @@ ja:
         person_num: 人数
     errors:
       models:
+        user:
+          attributes:
+            name:
+              blank: "を入力してください。"
+            email:
+              blank: "を入力してください。"
+              invalid: "の形式が正しくありません。"
+              taken: "は既に登録されています。"
+            password:
+              blank: "を入力してください。"
+              too_short: "は%{count}文字以上で入力してください。"
+            password_confirmation:
+              confirmation: "がパスワードと一致しません。"
+            image:
+              content_type_invalid: "は画像ファイル（JPEG、PNG、GIF）を選択してください。"
         room:
           attributes:
             name:
               blank: "は必須です。"
+              too_long: "は%{count}文字以内で入力してください。"
             content:
               blank: "は必須です。"
             price:
               blank: "は必須です。"
             address:
               blank: "は必須です。"
+            image:
+              content_type_invalid: "は画像ファイル（JPEG、PNG、GIF）を選択してください。"

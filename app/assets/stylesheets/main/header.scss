@@ -67,6 +67,23 @@
   min-width: 122px;
   padding: 9px 0;
 
+  &__delete-button {
+    background: none;
+    border: none;
+    color: $primary-red;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+
+    &:hover {
+      background: none;
+    }
+  }
+
   &[data-bs-popper] {
     @include xs-device-or-less {
       left: -100% !important;
@@ -91,6 +108,29 @@
     &--danger {
       > a {
         color: $primary-red;
+      }
+
+      > form {
+        display: inline;
+        margin: 0;
+        padding: 0;
+
+        > button {
+          background: none;
+          border: none;
+          color: $primary-red;
+          cursor: pointer;
+          display: block;
+          font-size: 14px;
+          line-height: 18px;
+          padding: 0;
+          text-align: left;
+          width: 100%;
+
+          &:hover {
+            background: none;
+          }
+        }
       }
     }
   }

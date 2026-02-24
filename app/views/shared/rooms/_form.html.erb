@@ -41,9 +41,10 @@
     <p class=" RoomsForm__input FileUploadArea__input-group">
       <%= f.label :image, "施設画像", class: "FileUploadArea__label" do %>
         <span>画像アップロード</span>
-        <%= f.file_field :image %>
+        <%= f.file_field :image, accept: "image/jpeg,image/png,image/gif" %>
       <% end %>
     </p>
+    <%= render "shared/error_message", object: @room, key: "image" %>
   </div>
 
   <%= f.submit "保存", class: 'btn RoomsForm__button RoomsForm__button--submit' %>

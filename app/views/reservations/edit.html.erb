@@ -26,7 +26,7 @@
       </p>
     </div>
 
-    <%= form_with model: @reservation, url: confirm_reservations_path, local: true, class: "Form ReservationsForm", method: :post do |f| %>
+    <%= form_with model: @reservation, url: confirm_reservations_path, local: true, data: { turbo: false }, class: "Form ReservationsForm", method: :post do |f| %>
       <%= hidden_field_tag "reservation[id]", @reservation.id %>
       <%= hidden_field_tag "reservation[room_id]", @reservation.room.id %>
 

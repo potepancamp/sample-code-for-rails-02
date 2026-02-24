@@ -75,6 +75,27 @@
           &:first-of-type {
             margin-bottom: 5px;
           }
+
+          > form {
+            display: inline;
+            margin: 0;
+            padding: 0;
+
+            > button {
+              background: none;
+              border: none;
+              cursor: pointer;
+              font-size: 14px;
+              line-height: 18px;
+              padding: 0;
+              text-align: left;
+              width: 100%;
+            }
+          }
+
+          &--danger > form > button {
+            color: #dc3545;
+          }
         }
       }
     }
