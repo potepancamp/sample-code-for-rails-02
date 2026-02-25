@@ -11,7 +11,21 @@ class Room < ApplicationRecord
     validates :price
   end
 
+  validates :name, length: { maximum: 255 }
   validates :price, numericality: { only_integer: true, greater_than: 0 }
+  validate :image_content_type_validation
+
+  private
+
+  def image_content_type_validation
+    return unless image.attached?
+
+    allowed_types = ['image/jpeg', 'image/png', 'image/gif']
+    unless allowed_types.include?(image.content_type)
+      errors.add(:image, :content_type_invalid)
+      image.purge
+    end
+  end
 
   scope :search_by_area, -> (area) {
     if area.present?

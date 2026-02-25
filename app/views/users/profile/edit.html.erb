@@ -20,9 +20,10 @@
 
             <%= f.label :image, "アイコン画像", class: "FileUploadArea__label" do %>
               <span>画像アップロード</span>
-              <%= f.file_field :image %>
+              <%= f.file_field :image, accept: "image/jpeg,image/png,image/gif" %>
             <% end %>
           </p>
+          <%= render "shared/error_message", object: current_user, key: "image" %>
         </div>
 
         <div class="AccountInformation__input-group">
